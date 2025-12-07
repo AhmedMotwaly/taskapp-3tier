@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - TaskApp{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6 text-center">
+            <div class="error-page">
+                <i class="fas fa-server fa-5x text-danger mb-4"></i>
+                <h1 class="display-1 fw-bold text-danger">500</h1>
+                <h3 class="mb-3">Internal Server Error</h3>
+                <p class="lead text-muted mb-4">
+                    Something went wrong on our end. We're working to fix it!
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button onclick="window.location.reload()" class="btn btn-primary">
+                        <i class="fas fa-redo me-2"></i>Try Again
+                    </button>
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+                        <i class="fas fa-home me-2"></i>Go Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
